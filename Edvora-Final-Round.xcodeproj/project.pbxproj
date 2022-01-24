@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		975536A2279EF681000F9E59 /* Edvora_Final_RoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536A1279EF681000F9E59 /* Edvora_Final_RoundApp.swift */; };
+		975536A4279EF681000F9E59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536A3279EF681000F9E59 /* ContentView.swift */; };
+		975536A6279EF683000F9E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975536A5279EF683000F9E59 /* Assets.xcassets */; };
+		975536A9279EF683000F9E59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975536A8279EF683000F9E59 /* Preview Assets.xcassets */; };
+		975536B0279EFC86000F9E59 /* Examination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536AF279EFC86000F9E59 /* Examination.swift */; };
+		975536B2279EFCF2000F9E59 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536B1279EFCF2000F9E59 /* Classroom.swift */; };
+		975536B4279EFDE9000F9E59 /* ExamSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536B3279EFDE9000F9E59 /* ExamSection.swift */; };
+		975536B6279EFE4D000F9E59 /* ExamQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536B5279EFE4D000F9E59 /* ExamQuestion.swift */; };
+		975536B8279F010A000F9E59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536B7279F010A000F9E59 /* User.swift */; };
+		975536BB279F0429000F9E59 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536BA279F0429000F9E59 /* Dashboard.swift */; };
+		975536BD279F043A000F9E59 /* Exams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536BC279F043A000F9E59 /* Exams.swift */; };
+		975536BF279F0452000F9E59 /* Page1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536BE279F0452000F9E59 /* Page1.swift */; };
+		975536C1279F045E000F9E59 /* Page2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536C0279F045E000F9E59 /* Page2.swift */; };
+		975536C3279F046B000F9E59 /* Page5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536C2279F046B000F9E59 /* Page5.swift */; };
+		975536C5279F0695000F9E59 /* WelcomeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536C4279F0695000F9E59 /* WelcomeUserView.swift */; };
+		975536C7279F0CB2000F9E59 /* Color-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536C6279F0CB2000F9E59 /* Color-Ext.swift */; };
+		975536C9279F1654000F9E59 /* ExamCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536C8279F1654000F9E59 /* ExamCardView.swift */; };
+		975536CB279F1EE7000F9E59 /* AttendanceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536CA279F1EE7000F9E59 /* AttendanceDataView.swift */; };
+		975536CD279F22DA000F9E59 /* AttendanceProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536CC279F22DA000F9E59 /* AttendanceProgressView.swift */; };
+		975536CF279F314C000F9E59 /* ExaminationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536CE279F314C000F9E59 /* ExaminationsView.swift */; };
+		975536D1279F3172000F9E59 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536D0279F3172000F9E59 /* AttendanceView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9755369E279EF681000F9E59 /* Edvora-Final-Round.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edvora-Final-Round.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		975536A1279EF681000F9E59 /* Edvora_Final_RoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edvora_Final_RoundApp.swift; sourceTree = "<group>"; };
+		975536A3279EF681000F9E59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		975536A5279EF683000F9E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		975536A8279EF683000F9E59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		975536AF279EFC86000F9E59 /* Examination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examination.swift; sourceTree = "<group>"; };
+		975536B1279EFCF2000F9E59 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
+		975536B3279EFDE9000F9E59 /* ExamSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSection.swift; sourceTree = "<group>"; };
+		975536B5279EFE4D000F9E59 /* ExamQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamQuestion.swift; sourceTree = "<group>"; };
+		975536B7279F010A000F9E59 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		975536BA279F0429000F9E59 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		975536BC279F043A000F9E59 /* Exams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exams.swift; sourceTree = "<group>"; };
+		975536BE279F0452000F9E59 /* Page1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1.swift; sourceTree = "<group>"; };
+		975536C0279F045E000F9E59 /* Page2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2.swift; sourceTree = "<group>"; };
+		975536C2279F046B000F9E59 /* Page5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5.swift; sourceTree = "<group>"; };
+		975536C4279F0695000F9E59 /* WelcomeUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserView.swift; sourceTree = "<group>"; };
+		975536C6279F0CB2000F9E59 /* Color-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Ext.swift"; sourceTree = "<group>"; };
+		975536C8279F1654000F9E59 /* ExamCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamCardView.swift; sourceTree = "<group>"; };
+		975536CA279F1EE7000F9E59 /* AttendanceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDataView.swift; sourceTree = "<group>"; };
+		975536CC279F22DA000F9E59 /* AttendanceProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceProgressView.swift; sourceTree = "<group>"; };
+		975536CE279F314C000F9E59 /* ExaminationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminationsView.swift; sourceTree = "<group>"; };
+		975536D0279F3172000F9E59 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9755369B279EF681000F9E59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97553695279EF681000F9E59 = {
+			isa = PBXGroup;
+			children = (
+				975536A0279EF681000F9E59 /* Edvora-Final-Round */,
+				9755369F279EF681000F9E59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9755369F279EF681000F9E59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9755369E279EF681000F9E59 /* Edvora-Final-Round.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		975536A0279EF681000F9E59 /* Edvora-Final-Round */ = {
+			isa = PBXGroup;
+			children = (
+				975536A1279EF681000F9E59 /* Edvora_Final_RoundApp.swift */,
+				975536A3279EF681000F9E59 /* ContentView.swift */,
+				975536BA279F0429000F9E59 /* Dashboard.swift */,
+				975536D0279F3172000F9E59 /* AttendanceView.swift */,
+				975536CE279F314C000F9E59 /* ExaminationsView.swift */,
+				975536CA279F1EE7000F9E59 /* AttendanceDataView.swift */,
+				975536CC279F22DA000F9E59 /* AttendanceProgressView.swift */,
+				975536C8279F1654000F9E59 /* ExamCardView.swift */,
+				975536C4279F0695000F9E59 /* WelcomeUserView.swift */,
+				975536BC279F043A000F9E59 /* Exams.swift */,
+				975536BE279F0452000F9E59 /* Page1.swift */,
+				975536C0279F045E000F9E59 /* Page2.swift */,
+				975536C2279F046B000F9E59 /* Page5.swift */,
+				975536B9279F03EE000F9E59 /* Models */,
+				975536A5279EF683000F9E59 /* Assets.xcassets */,
+				975536C6279F0CB2000F9E59 /* Color-Ext.swift */,
+				975536A7279EF683000F9E59 /* Preview Content */,
+			);
+			path = "Edvora-Final-Round";
+			sourceTree = "<group>";
+		};
+		975536A7279EF683000F9E59 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				975536A8279EF683000F9E59 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		975536B9279F03EE000F9E59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				975536AF279EFC86000F9E59 /* Examination.swift */,
+				975536B3279EFDE9000F9E59 /* ExamSection.swift */,
+				975536B5279EFE4D000F9E59 /* ExamQuestion.swift */,
+				975536B1279EFCF2000F9E59 /* Classroom.swift */,
+				975536B7279F010A000F9E59 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9755369D279EF681000F9E59 /* Edvora-Final-Round */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975536AC279EF683000F9E59 /* Build configuration list for PBXNativeTarget "Edvora-Final-Round" */;
+			buildPhases = (
+				9755369A279EF681000F9E59 /* Sources */,
+				9755369B279EF681000F9E59 /* Frameworks */,
+				9755369C279EF681000F9E59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Edvora-Final-Round";
+			productName = "Edvora-Final-Round";
+			productReference = 9755369E279EF681000F9E59 /* Edvora-Final-Round.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97553696279EF681000F9E59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					9755369D279EF681000F9E59 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 97553699279EF681000F9E59 /* Build configuration list for PBXProject "Edvora-Final-Round" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97553695279EF681000F9E59;
+			productRefGroup = 9755369F279EF681000F9E59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9755369D279EF681000F9E59 /* Edvora-Final-Round */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9755369C279EF681000F9E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975536A9279EF683000F9E59 /* Preview Assets.xcassets in Resources */,
+				975536A6279EF683000F9E59 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9755369A279EF681000F9E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975536C9279F1654000F9E59 /* ExamCardView.swift in Sources */,
+				975536C1279F045E000F9E59 /* Page2.swift in Sources */,
+				975536CF279F314C000F9E59 /* ExaminationsView.swift in Sources */,
+				975536A4279EF681000F9E59 /* ContentView.swift in Sources */,
+				975536B2279EFCF2000F9E59 /* Classroom.swift in Sources */,
+				975536BB279F0429000F9E59 /* Dashboard.swift in Sources */,
+				975536C3279F046B000F9E59 /* Page5.swift in Sources */,
+				975536BD279F043A000F9E59 /* Exams.swift in Sources */,
+				975536CD279F22DA000F9E59 /* AttendanceProgressView.swift in Sources */,
+				975536A2279EF681000F9E59 /* Edvora_Final_RoundApp.swift in Sources */,
+				975536C7279F0CB2000F9E59 /* Color-Ext.swift in Sources */,
+				975536C5279F0695000F9E59 /* WelcomeUserView.swift in Sources */,
+				975536B4279EFDE9000F9E59 /* ExamSection.swift in Sources */,
+				975536B6279EFE4D000F9E59 /* ExamQuestion.swift in Sources */,
+				975536B0279EFC86000F9E59 /* Examination.swift in Sources */,
+				975536D1279F3172000F9E59 /* AttendanceView.swift in Sources */,
+				975536BF279F0452000F9E59 /* Page1.swift in Sources */,
+				975536B8279F010A000F9E59 /* User.swift in Sources */,
+				975536CB279F1EE7000F9E59 /* AttendanceDataView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		975536AA279EF683000F9E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		975536AB279EF683000F9E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		975536AD279EF683000F9E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Edvora-Final-Round/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P3NHST8R6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydendavidson.Edvora-Final-Round";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		975536AE279EF683000F9E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Edvora-Final-Round/Preview Content\"";
+				DEVELOPMENT_TEAM = 2P3NHST8R6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydendavidson.Edvora-Final-Round";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97553699279EF681000F9E59 /* Build configuration list for PBXProject "Edvora-Final-Round" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975536AA279EF683000F9E59 /* Debug */,
+				975536AB279EF683000F9E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		975536AC279EF683000F9E59 /* Build configuration list for PBXNativeTarget "Edvora-Final-Round" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975536AD279EF683000F9E59 /* Debug */,
+				975536AE279EF683000F9E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97553696279EF681000F9E59 /* Project object */;
+}
