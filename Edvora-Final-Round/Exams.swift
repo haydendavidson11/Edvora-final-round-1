@@ -9,12 +9,16 @@ import SwiftUI
 
 struct Exams: View {
     var body: some View {
-        Text("Exams")
+        NavigationView {
+            CreateNewExam()
+        }
     }
 }
 
 struct Exams_Previews: PreviewProvider {
     static var previews: some View {
-        Exams()
+        NavigationView {
+            Exams()
+        }
     }
 }

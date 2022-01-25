@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExaminationsView: View {
+    @EnvironmentObject var appState: AppState
+
     var body: some View {
         VStack {
             HStack {
@@ -16,7 +18,9 @@ struct ExaminationsView: View {
                     .fontWeight(.bold)
                 Spacer()
 
-                NavigationLink(destination: Text("Create New Exam View")) {
+                Button {
+                    appState.setSelectedTab = "exams"
+                } label: {
                     Image(systemName: "plus")
                         .foregroundColor(.lightPink)
                 }
