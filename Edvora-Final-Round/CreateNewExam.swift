@@ -11,14 +11,15 @@ struct CreateNewExam: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var state: AppState
 
-    @State private var classroom = "Select a Classroom"
-    @State private var syllabus = ""
+    @State var exam = Examination()
+
     @State private var date = ""
     @State private var time = ""
     @State private var duration = ""
     @State private var timeFrame = ""
     @State private var totalMarks = ""
     @State private var category = ""
+
 
     var calendarImage: Image {
         return Image(systemName: "calendar")
@@ -42,7 +43,7 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Classroom:")
                         Spacer()
-                        SelectClassroomPicker()
+                        SelectClassroomPicker(classroom: $exam.classroom)
                             .frame(maxWidth: 280)
 
                     }
@@ -50,8 +51,8 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Syllabus:")
                         Spacer()
-                        TextField("", text: $syllabus)
-                            .placeholder(when: syllabus.isEmpty) {
+                        TextField("", text: $exam.syllabus)
+                            .placeholder(when: exam.syllabus.isEmpty) {
                                 Text("Enter modules here").foregroundColor(.lightPink)
                             }
                             .padding()
@@ -63,8 +64,8 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Date:")
                         Spacer()
-                        TextField("", text: $date)
-                            .placeholder(when: date.isEmpty) {
+                        TextField("", text: $exam.date)
+                            .placeholder(when: exam.date.isEmpty) {
                                 Text("DD / MM / YY  \(calendarImage)").foregroundColor(.lightPink)
                             }
                             .padding()
@@ -77,8 +78,8 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Time:")
                         Spacer()
-                        TextField("", text: $time)
-                            .placeholder(when: time.isEmpty) {
+                        TextField("", text: $exam.time)
+                            .placeholder(when: exam.time.isEmpty) {
                                 Text("HR : MN : SC  \(clockImage)").foregroundColor(.lightPink)
                             }
                             .padding()
@@ -91,8 +92,8 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Duration:")
                         Spacer()
-                        TextField("", text: $duration)
-                            .placeholder(when: duration.isEmpty) {
+                        TextField("", text: $exam.duration)
+                            .placeholder(when: exam.duration.isEmpty) {
                                 Text("HR | MN").foregroundColor(.lightPink)
                             }
                             .padding()
@@ -106,8 +107,8 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Timeframe:")
                         Spacer()
-                        TextField("", text: $timeFrame)
-                            .placeholder(when: timeFrame.isEmpty) {
+                        TextField("", text: $exam.timeFrame)
+                            .placeholder(when: exam.timeFrame.isEmpty) {
                                 Text("HR | MN").foregroundColor(.lightPink)
                             }
                             .padding()
@@ -120,7 +121,7 @@ struct CreateNewExam: View {
                     HStack {
                         Text("Total Marks:")
                         Spacer()
-                        TextField("", text: $totalMarks)
+                        TextField("", text: $exam.totalMarks)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 5)
                                             .foregroundColor(Color(uiColor: .secondarySystemBackground)))
@@ -174,7 +175,7 @@ struct CreateNewExam: View {
             }
 
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: AddExamSections()) {
+                NavigationLink(destination: AddExamSections(section: $exam.sections.first!, saveExam: saveExam)) {
                     Text("Next")
                         .font(.system(size: 20))
                         .foregroundColor(.lightPink)
@@ -188,6 +189,11 @@ struct CreateNewExam: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
     }
+
+    func saveExam() {
+        state.exams.append(exam)
+    }
+
 }
 
 struct CreateNewExam_Previews: PreviewProvider {

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct AttendanceProgressView: View {
-    @State private var progress = 0.75
+    @EnvironmentObject var state : AppState
+
+    @State private var progress = 0.0
+
 
     var body: some View {
             ZStack {
@@ -27,7 +30,14 @@ struct AttendanceProgressView: View {
                     .foregroundColor(.buttonGreen)
                     .rotationEffect(Angle(degrees: -90))
             }
-            .padding()        
+            .padding()
+            .onAppear {
+                withAnimation {
+                    if let classroom = state.lowestAttendedClass(for: state.user) {
+                        progress = classroom.attendance
+                    }
+                }
+            }
     }
 }
 

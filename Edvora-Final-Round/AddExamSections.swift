@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct AddExamSections: View {
+    @Binding var section: ExamSection
+
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var state: AppState
+
+    let notificationCenter = NotificationCenter.default
 
     @State private var instructions = ""
     @State private var sectionTitle = ""
     @State private var SectionDescription = ""
+
+    var saveExam: () -> Void
+
 
 
     var body: some View {
@@ -26,7 +34,7 @@ struct AddExamSections: View {
                         .foregroundColor(.darkGray)
                         .fontWeight(.medium)
 
-                    TextField("", text: $instructions)
+                    TextField("", text: $section.instructions)
                         .padding(.horizontal)
                         .frame(minHeight: 50)
                         .background(RoundedRectangle(cornerRadius: 5)
@@ -36,9 +44,9 @@ struct AddExamSections: View {
                         .foregroundColor(.darkGray)
                         .fontWeight(.medium)
 
-                    TextField("", text: $sectionTitle)
+                    TextField("", text: $section.title)
                         .padding(.horizontal)
-                        .placeholder(when: sectionTitle.isEmpty, placeholder: {
+                        .placeholder(when: section.title.isEmpty, placeholder: {
                             Text("Section title").foregroundColor(.lightGray).opacity(0.7)
                                 .padding(.horizontal)
                         })
@@ -46,21 +54,34 @@ struct AddExamSections: View {
                         .background(RoundedRectangle(cornerRadius: 5)
                                         .foregroundColor(Color(uiColor: .secondarySystemBackground)))
 
-                    ShadedTextEditor(text: $SectionDescription)
+                    ShadedTextEditor(text: $section.description)
                         .frame(maxHeight: 120)
 
-                    ExamQuestionView()
+                    if !section.sectionQuestions.isEmpty {
+                        ForEach($section.sectionQuestions) { $question in
+                            ExamQuestionView(optionCount: question.options.count, question: $question)
+                        }
+                    }
 
 
 
                     Button {
-                        // Add Another Question
+                        // Add Question
+                        section.sectionQuestions.append(ExamQuestion())
+                        print(section.sectionQuestions.count)
+
                     } label: {
                         HStack {
                             Spacer()
-                            Text("Add another question")
-                                .font(.headline)
-                                .padding()
+                            if section.sectionQuestions.isEmpty {
+                                Text("Add question")
+                                    .font(.headline)
+                                    .padding()
+                            } else {
+                                Text("Add another question")
+                                    .font(.headline)
+                                    .padding()
+                            }
                             Spacer()
                         }
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -70,6 +91,8 @@ struct AddExamSections: View {
 
                     Button {
                         // Add Another Section
+
+                        
                     } label: {
                         HStack {
                             Spacer()
@@ -115,6 +138,7 @@ struct AddExamSections: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     // save
+                    saveExam()
                 } label: {
                     Text("Save")
                         .font(.system(size: 20))
@@ -135,7 +159,7 @@ struct AddExamSections: View {
 struct AddExamSections_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AddExamSections()
+            AddExamSections(section: .constant(ExamSection.example), saveExam: {})
         }
     }
 }

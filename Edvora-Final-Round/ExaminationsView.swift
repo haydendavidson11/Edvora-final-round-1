@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExaminationsView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var state: AppState
 
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct ExaminationsView: View {
                 Spacer()
 
                 Button {
-                    appState.setSelectedTab = "exams"
+                    state.setSelectedTab = "exams"
                 } label: {
                     Image(systemName: "plus")
                         .foregroundColor(.lightPink)
@@ -29,8 +29,8 @@ struct ExaminationsView: View {
 
             ScrollView(.horizontal) {
                 LazyHStack {
-                    ForEach(0..<5) { i in
-                        ExamCardView(exam: Examination.example)
+                    ForEach(state.exams) { exam in
+                        ExamCardView(exam: exam)
                     }
                 }
             }

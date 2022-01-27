@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct AttendanceDataView: View {
+    @EnvironmentObject var state: AppState
+
     @State private var lowAttendance = true
 
     @State private var progress = 0.75
+
+    var lowAttendedClass: Classroom? {
+        return state.lowestAttendedClass(for: state.user)
+    }
 
     var body: some View {
         VStack(alignment: .center) {
@@ -25,7 +31,7 @@ struct AttendanceDataView: View {
                             Text("Total Classes")
 
                         // classes Attended
-                            Text("Classes Classes")
+                            Text("Classes Attended")
 
                         // Classes Missed
                             Text("Missed Classes")
@@ -37,13 +43,13 @@ struct AttendanceDataView: View {
 
                     VStack(spacing: 10) {
                         // Total Classes
-                        Text("70")
+                        Text("\(state.classes.allClasses.count)")
                         // classes Attended
-                        Text("70")
+                        Text("\(state.attendedClasses())")
                         // Classes Missed
-                        Text("70")
+                        Text("\(state.missedClasses())")
                         // Classes Left
-                        Text("70")
+                        Text("\(state.classesLeft())")
                     }
                 }
 
@@ -55,7 +61,7 @@ struct AttendanceDataView: View {
                     Spacer()
 
                     Label {
-                        Text("Your attendance seems to be low in DSA")
+                        Text("Your attendance seems to be low in \(lowAttendedClass?.title ?? "JS 101")")
                     } icon: {
                         Image(systemName: "bell.fill")
                     }
@@ -66,6 +72,11 @@ struct AttendanceDataView: View {
                     Spacer()
                 }
 
+            }
+        }
+        .onAppear {
+            if lowAttendedClass != nil {
+                self.lowAttendance = true
             }
         }
     }

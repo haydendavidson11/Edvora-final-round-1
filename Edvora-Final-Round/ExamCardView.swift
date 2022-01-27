@@ -22,7 +22,7 @@ struct ExamCardView: View {
 
                 Spacer()
 
-                if exam.inProgress {
+                if exam.classroom.attendance > 0.0 {
                     Button {
                         // Take Exam
                     } label: {
@@ -62,14 +62,15 @@ struct ExamCardView: View {
         }
         .padding()
         .background(Color(uiColor: .secondarySystemBackground)
-                        .cornerRadius(10))
-            .frame(width: 320, height: 150)
+                        .cornerRadius(10)
+                        .frame(height: 180))
+            .frame(width: 320, height: 180)
 
     }
 }
 
 struct ExamCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ExamCardView(exam: Examination.example)
+        ExamCardView(exam: Examination.example1)
     }
 }

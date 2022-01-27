@@ -11,28 +11,26 @@ import Foundation
 struct Examination: Identifiable {
     let id = UUID().uuidString
 
-    var classroom: Classroom
-    var syllabus: String
-    var date: Date
-    var time: Date
-    var duration: Date
-    var timeFrame: Date
-    var totalMarks: Int
-    var category: [String]
+    var classroom = Classroom()
+    var syllabus = ""
+    var date = "" // should really be a Date
+    var time = "" // should really be a Date
+    var duration = "" // should really be a Date
+    var timeFrame = "" // should really be a Date
+    var totalMarks = ""
+    var category = [String]()
 
-    var complete: Bool
+    var complete = false
 
-    var instructions: String
+    var instructions = ""
 
-    var section: [ExamSection]
+    var sections = [ExamSection()]
 
-    static var example = Examination(classroom: Classroom.example, syllabus: "New Syllabus", date: Date(), time: Date(), duration: Date(), timeFrame: Date(), totalMarks: 20, category: ["internal, mock, ect"], complete: false, instructions: "These the intructions.", section: [ExamSection.example])
+    
 
+    static var example1 = Examination(classroom: Classes().allClasses.randomElement() ?? Classroom.example, syllabus: "New Syllabus", date: "", time: "", duration: "", timeFrame: "", totalMarks: "20", category: ["internal, mock, ect"], complete: false, instructions: "These the intructions.", sections: [ExamSection.example])
 
-    var inProgress: Bool {
-        //  Check if the date and time are after the CurrentDate
+//    var inProgress = Bool.random()
 
-        return true
-    }
 
 }

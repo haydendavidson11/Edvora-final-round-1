@@ -75,6 +75,7 @@ struct ContentView: View {
                     .tag("page5")
         }
         .environmentObject(state)
+
     }
 }
 

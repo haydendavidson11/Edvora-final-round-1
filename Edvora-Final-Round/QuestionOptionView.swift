@@ -7,30 +7,43 @@
 
 import SwiftUI
 
-struct QuestionOption: View {
-    @State private var selected = false
+struct QuestionOptionView: View {
     @State private var optionTitle = ""
-    @State private var selectable = true
-    @State private var editing = true
+    var editing: Bool
+
+    @State var option: QuestionOption
+
+    @Binding var optionsToBeRemoved: Set<QuestionOption>
+
+    let letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+//    var deleteAction: (_ id: String) -> Void
+    var saveOption: (_ option: QuestionOption) -> Void
 
     var questionDescription: some View {
         HStack {
-            Text("A")
+            Text(letters[option.position].uppercased())
                 .bold()
-                .foregroundColor(selected ? .lightPink : .darkPink)
+                .foregroundColor(option.isAnswer ? .lightPink : .darkPink)
                 .padding(10)
                 .background(RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(selected ? .darkPink : .questionPink))
+                                .foregroundColor(option.isAnswer ? .darkPink : .questionPink))
 
-            TextField("", text: $optionTitle)
+            TextField("", text: $option.title)
                 .padding(.leading)
-                .placeholder(when: optionTitle.isEmpty) {
-                    Text("Option One")
+                .placeholder(when: option.title.isEmpty) {
+                    Text("Add Option...")
+                        .foregroundColor(.lightGray).opacity(0.7)
+                        .padding(.horizontal)
+                }
+                .submitLabel(.next)
+                .onSubmit {
+                    saveOption(option)
                 }
         }
         .padding(5)
         .background(ZStack {
-            if selected {
+            if option.isAnswer {
                 RoundedRectangle(cornerRadius: 5)
                                 .foregroundColor(.questionPink)
             } else {
@@ -44,14 +57,14 @@ struct QuestionOption: View {
 
     var selectButton: some View {
         Button {
-            self.selected.toggle()
+            option.isAnswer.toggle()
         } label: {
             ZStack {
                 Circle()
                     .strokeBorder(lineWidth: 1)
                     .foregroundColor(.darkPink)
                     .frame(width: 30)
-                if selected {
+                if option.isAnswer {
                     Circle()
                         .foregroundColor(.darkPink)
                         .frame(width: 20)
@@ -63,21 +76,25 @@ struct QuestionOption: View {
 
     var body: some View {
         HStack {
-            if selectable {
-                selectButton
-            } else {
-                Spacer()
-            }
+
+            selectButton
+
             questionDescription
 
             if editing {
                 Button {
-                    // delete option from question
+                    if optionsToBeRemoved.contains(option) {
+                        if let pos = optionsToBeRemoved.firstIndex(of: option) {
+                            optionsToBeRemoved.remove(at: pos)
+                        }
+                    } else {
+                        optionsToBeRemoved.insert(option)
+                    }
                 } label: {
                     Image(systemName: "x.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.lightPink)
+                        .foregroundColor(optionsToBeRemoved.contains(option) ? .darkPink : .lightPink)
                         .frame(width: 30)
                 }
 
@@ -90,6 +107,6 @@ struct QuestionOption: View {
 
 struct QuestionOption_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionOption()
+        QuestionOptionView(editing: false, option: QuestionOption.example1, optionsToBeRemoved: .constant([]), saveOption: {option in})
     }
 }

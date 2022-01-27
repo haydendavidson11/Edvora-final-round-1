@@ -11,7 +11,9 @@
 		9732D56E27A0691B005B84F1 /* AddExamSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D56D27A0691B005B84F1 /* AddExamSections.swift */; };
 		9732D57027A07B59005B84F1 /* ShadedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D56F27A07B59005B84F1 /* ShadedTextEditor.swift */; };
 		9732D57227A09A56005B84F1 /* ExamQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D57127A09A56005B84F1 /* ExamQuestionView.swift */; };
-		9732D57427A0A437005B84F1 /* QuestionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D57327A0A437005B84F1 /* QuestionOption.swift */; };
+		9732D57427A0A437005B84F1 /* QuestionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D57327A0A437005B84F1 /* QuestionOptionView.swift */; };
+		9732D57627A1A4DC005B84F1 /* QuestionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D57527A1A4DC005B84F1 /* QuestionOption.swift */; };
+		9732D57827A1ECCB005B84F1 /* NewOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732D57727A1ECCB005B84F1 /* NewOptionView.swift */; };
 		975536A2279EF681000F9E59 /* Edvora_Final_RoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536A1279EF681000F9E59 /* Edvora_Final_RoundApp.swift */; };
 		975536A4279EF681000F9E59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975536A3279EF681000F9E59 /* ContentView.swift */; };
 		975536A6279EF683000F9E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975536A5279EF683000F9E59 /* Assets.xcassets */; };
@@ -43,7 +45,9 @@
 		9732D56D27A0691B005B84F1 /* AddExamSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExamSections.swift; sourceTree = "<group>"; };
 		9732D56F27A07B59005B84F1 /* ShadedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadedTextEditor.swift; sourceTree = "<group>"; };
 		9732D57127A09A56005B84F1 /* ExamQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamQuestionView.swift; sourceTree = "<group>"; };
-		9732D57327A0A437005B84F1 /* QuestionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOption.swift; sourceTree = "<group>"; };
+		9732D57327A0A437005B84F1 /* QuestionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionView.swift; sourceTree = "<group>"; };
+		9732D57527A1A4DC005B84F1 /* QuestionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOption.swift; sourceTree = "<group>"; };
+		9732D57727A1ECCB005B84F1 /* NewOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOptionView.swift; sourceTree = "<group>"; };
 		9755369E279EF681000F9E59 /* Edvora-Final-Round.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edvora-Final-Round.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		975536A1279EF681000F9E59 /* Edvora_Final_RoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edvora_Final_RoundApp.swift; sourceTree = "<group>"; };
 		975536A3279EF681000F9E59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,7 +114,8 @@
 				975536D2279F53EA000F9E59 /* CreateNewExam.swift */,
 				9732D56D27A0691B005B84F1 /* AddExamSections.swift */,
 				9732D57127A09A56005B84F1 /* ExamQuestionView.swift */,
-				9732D57327A0A437005B84F1 /* QuestionOption.swift */,
+				9732D57327A0A437005B84F1 /* QuestionOptionView.swift */,
+				9732D57727A1ECCB005B84F1 /* NewOptionView.swift */,
 				9732D56F27A07B59005B84F1 /* ShadedTextEditor.swift */,
 				975536D627A046A8000F9E59 /* SelectClassroomPicker.swift */,
 				975536CA279F1EE7000F9E59 /* AttendanceDataView.swift */,
@@ -144,6 +149,7 @@
 				975536AF279EFC86000F9E59 /* Examination.swift */,
 				975536B3279EFDE9000F9E59 /* ExamSection.swift */,
 				975536B5279EFE4D000F9E59 /* ExamQuestion.swift */,
+				9732D57527A1A4DC005B84F1 /* QuestionOption.swift */,
 				975536B1279EFCF2000F9E59 /* Classroom.swift */,
 				975536B7279F010A000F9E59 /* User.swift */,
 			);
@@ -224,12 +230,14 @@
 				975536C1279F045E000F9E59 /* Page2.swift in Sources */,
 				975536CF279F314C000F9E59 /* ExaminationsView.swift in Sources */,
 				975536D3279F53EA000F9E59 /* CreateNewExam.swift in Sources */,
+				9732D57627A1A4DC005B84F1 /* QuestionOption.swift in Sources */,
 				9732D56E27A0691B005B84F1 /* AddExamSections.swift in Sources */,
 				975536A4279EF681000F9E59 /* ContentView.swift in Sources */,
 				975536D727A046A8000F9E59 /* SelectClassroomPicker.swift in Sources */,
 				975536B2279EFCF2000F9E59 /* Classroom.swift in Sources */,
 				975536BB279F0429000F9E59 /* Dashboard.swift in Sources */,
 				975536C3279F046B000F9E59 /* Page5.swift in Sources */,
+				9732D57827A1ECCB005B84F1 /* NewOptionView.swift in Sources */,
 				975536BD279F043A000F9E59 /* Exams.swift in Sources */,
 				975536CD279F22DA000F9E59 /* AttendanceProgressView.swift in Sources */,
 				975536A2279EF681000F9E59 /* Edvora_Final_RoundApp.swift in Sources */,
@@ -240,7 +248,7 @@
 				975536B6279EFE4D000F9E59 /* ExamQuestion.swift in Sources */,
 				9732D56C27A0606C005B84F1 /* AppState.swift in Sources */,
 				9732D57227A09A56005B84F1 /* ExamQuestionView.swift in Sources */,
-				9732D57427A0A437005B84F1 /* QuestionOption.swift in Sources */,
+				9732D57427A0A437005B84F1 /* QuestionOptionView.swift in Sources */,
 				975536B0279EFC86000F9E59 /* Examination.swift in Sources */,
 				975536D1279F3172000F9E59 /* AttendanceView.swift in Sources */,
 				9732D57027A07B59005B84F1 /* ShadedTextEditor.swift in Sources */,
