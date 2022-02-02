@@ -1,0 +1,3 @@
+![instructions](https://github.com/haydendavidson11/Edvora-final-round-1/blob/main/project-instructions.png)
+
+I completed this project in the 72 hour time frame given by the interviewer and has not been modified since. While the code base needs some much needed cleanup and refactoring it show what I can complete when given a design file and minimal instructions on data structures, functionality, data flow. Refactoring would include better separation of concerns using helper files, and dedicated View models to reduce logic in the views. Also, Testing and documentation are needed and would be implemented if given more time.    
